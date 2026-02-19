@@ -27,3 +27,18 @@ print(f"在字符串{my_str}中，子字符串\"it\"出现的次数是{count}")
 
 num = len(my_str)
 print(f"字符串{my_str}的长度是{num}")
+
+# while循环遍历字符串
+my_str = "黑马程序员"
+index = 0
+while index < len(my_str):
+    print(my_str[index])
+    index += 1
+
+# for循环遍历字符串
+for char in my_str:
+    print(char)
+
+for i in my_str:
+    print(i)
+    
