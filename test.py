@@ -1,41 +1,7 @@
-import tkinter as tk
-from tkinter import ttk
+my_str = "itheima and itcast"
+value = my_str[2]
+value2 = my_str[-16]
+print(f"从字符串{my_str}取下标为2的元素，值是{value},取下标元素为-16的元素，值是{value2}")
 
-def generate_multiplication_table():
-    headers = [str(i) for i in range(1, 10)]
-    table_data = []
-    for i in range(1, 10):
-        row = []
-        for j in range(1, 10):
-            if j <= i:
-                result = i * j
-                expression = f"{j}×{i}={result}"
-            else:
-                expression = ""
-            row.append(expression)
-        table_data.append(row)
-    return headers, table_data
-
-def show_multiplication_table():
-    headers, table_data = generate_multiplication_table()
-    
-    root = tk.Tk()
-    root.title("乘法口诀表")
-    root.geometry("600x400")
-    
-    tree = ttk.Treeview(root, columns=headers, show="headings", height=9)
-    
-    tree.column("#0", width=0, stretch=False)
-    for header in headers:
-        tree.column(header, width=70, anchor="center")
-        tree.heading(header, text=header)
-    
-    for row in table_data:
-        tree.insert("", "end", values=row)
-    
-    tree.pack(fill="both", expand=True, padx=10, pady=10)
-    
-    root.mainloop()
-
-if __name__ == "__main__":
-    show_multiplication_table()
+value = my_str.index("and")
+print (f"从字符串{my_str}中查找子字符串\"and\"，首次出现的下标是{value}")
